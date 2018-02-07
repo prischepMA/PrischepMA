@@ -1,0 +1,11 @@
+commit acf83d8794e8db03b129d95afa0895f763fed05d (HEAD -> master)
+Author: Prischep <ya.pryshchep@yandex.by>
+Date:   Wed Feb 7 21:34:03 2018 +0300
+
+    add status.txt
+
+commit 77fbbbd42d5b293cf074c116bd7096e26812af4a
+Author: Prischep <ya.pryshchep@yandex.by>
+Date:   Wed Feb 7 21:27:35 2018 +0300
+
+    add .gitignore
