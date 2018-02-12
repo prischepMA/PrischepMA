@@ -17,20 +17,12 @@ Untracked files:
 
 nothing added to commit but untracked files present (use "git add" to track)
 
-commit f3cb408e41c71df6ef57935f2cedf2315cdb76c6 (HEAD -> master, origin/master, origin/HEAD)
-Author: Prischep <ya.pryshchep@yandex.by>
-Date:   Wed Feb 7 22:38:01 2018 +0300
+On branch master
+Your branch is up to date with 'origin/master'.
 
-    add log.txt
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
 
-commit acf83d8794e8db03b129d95afa0895f763fed05d
-Author: Prischep <ya.pryshchep@yandex.by>
-Date:   Wed Feb 7 21:34:03 2018 +0300
+        src/
 
-    add status.txt
-
-commit 77fbbbd42d5b293cf074c116bd7096e26812af4a
-Author: Prischep <ya.pryshchep@yandex.by>
-Date:   Wed Feb 7 21:27:35 2018 +0300
-
-    add .gitignore
+nothing added to commit but untracked files present (use "git add" to track)
