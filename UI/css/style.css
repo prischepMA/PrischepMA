@@ -55,7 +55,7 @@ body {
 }
 
 header {
-
+    text-align: justify;
     height: auto;
     overflow: hidden;
     color: white;
@@ -64,6 +64,15 @@ header {
     font-weight: bold;
     padding: 0.3em;
     text-align: center;
+}
+header:after {
+    display: inline-block;
+    content: "";
+    width: 100%;
+}
+
+header div{
+    display: inline-block;
 }
 
 .button-in-header {
@@ -87,7 +96,7 @@ header {
 #add-new-photo {
     float: center;
     margin: 0.7em;
-    margin-right: 6em;
+
 }
 
 #exit {
@@ -178,6 +187,7 @@ footer {
 .filtr {
 
     height: auto;
+    width: auto;
     overflow: hidden;
     font-size: 1.5em;
     padding: 0.5em;
@@ -249,54 +259,53 @@ footer {
     .cell {
         vertical-align: top;
         display: inline-block;
-        width: 25%;
+        width: 45%;
         height: 100%;
         margin: 2em 0em;
         padding: 0.25em;
     }
-
 
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 768px){
+
     .cell {
         vertical-align: top;
         display: inline-block;
-        width: 40%;
+        width: 100%;
         height: 100%;
         margin: 2em 0em;
         padding: 0.25em;
     }
-
-    .auther-name {
-        font-family: 'Righteous', cursive;
-        text-align: center;
-        font-size: 2em;
-        color: #673ab7;
+    .some-info {
+        display: inline-block;
+        float: right;
         position: relative;
+        font-size: 1em;
+        padding: 0.5em;
+
+        font-family: 'Bellefair', serif;
     }
 }
+@media screen and (max-width: 400px){
+    #exit {
 
-@media screen and (max-width: 384px) {
-    .cell {
+        font-size: 40pt;
+        float: right;
+        margin-top: 0.9em;
+        margin-right: 18%;
+    }
 
-        vertical-align: top;
-        display: inline-block;
+    .filter-info {
+        font-family: 'Lobster', cursive;
         width: 70%;
-        height: 100%;
-        margin: 2em 0em;
-        padding: 0.25em;
-    }
-
-    .auther-name {
-        font-family: 'Righteous', cursive;
-        text-align: center;
-        font-size: 1.5em;
-        color: #673ab7;
+        margin: 1em;
+        font-size: 1em;
+        border-radius: 40px;
+        border: 2px solid #673ab7;
         position: relative;
     }
 }
-
 
 
 .back-under-photo {
@@ -312,19 +321,17 @@ footer {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Параметры тени */
     padding: 10px;
 }
-
 .icons {
     text-align: justify;
-    white-space: nowrap;
 }
 
-.icons div {
-    width: 42%;
+.icons:after {
     display: inline-block;
+    content: "";
+    width: 100%;
 }
-
-.del .like .edit {
-
+.icons div{
+    display: inline-block;
 }
 
 .auther-name {
