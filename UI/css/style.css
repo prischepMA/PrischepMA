@@ -221,7 +221,8 @@ footer {
     position: relative;
 }
 
-.photos_table {
+.photos-table {
+    text-align: justify;
     width: auto;
     position: relative;
     display: inline-block;
@@ -229,15 +230,74 @@ footer {
     padding: 2em;
 }
 
+.photos-table:after {
+    display: inline-block;
+    content: "";
+    width: 100%;
+}
+
 .cell {
     vertical-align: top;
     display: inline-block;
-    width: 19%;
-    min-width: 200px;
+    width: 17%;
     height: 100%;
     margin: 2em 0em;
     padding: 0.25em;
 }
+
+@media screen and (max-width: 960px) {
+    .cell {
+        vertical-align: top;
+        display: inline-block;
+        width: 25%;
+        height: 100%;
+        margin: 2em 0em;
+        padding: 0.25em;
+    }
+
+
+}
+
+@media screen and (max-width: 768px) {
+    .cell {
+        vertical-align: top;
+        display: inline-block;
+        width: 40%;
+        height: 100%;
+        margin: 2em 0em;
+        padding: 0.25em;
+    }
+
+    .auther-name {
+        font-family: 'Righteous', cursive;
+        text-align: center;
+        font-size: 2em;
+        color: #673ab7;
+        position: relative;
+    }
+}
+
+@media screen and (max-width: 384px) {
+    .cell {
+
+        vertical-align: top;
+        display: inline-block;
+        width: 70%;
+        height: 100%;
+        margin: 2em 0em;
+        padding: 0.25em;
+    }
+
+    .auther-name {
+        font-family: 'Righteous', cursive;
+        text-align: center;
+        font-size: 1.5em;
+        color: #673ab7;
+        position: relative;
+    }
+}
+
+
 
 .back-under-photo {
     background-color: #dbd7d7
@@ -253,23 +313,18 @@ footer {
     padding: 10px;
 }
 
-.del {
-    float: right;
-    position: relative;
+.icons {
+    text-align: justify;
+    white-space: nowrap;
+}
+
+.icons div {
+    width: 42%;
     display: inline-block;
 }
 
-.edit {
-    float: left;
-    position: relative;
-    display: inline-block;
-}
+.del .like .edit {
 
-.like {
-    margin-left: 35%;
-    margin-right: 25%;
-    position: relative;
-    display: inline-block;
 }
 
 .auther-name {
