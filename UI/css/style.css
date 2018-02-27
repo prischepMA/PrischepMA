@@ -170,6 +170,7 @@ footer {
 }
 
 #logo {
+    float: left;
     padding: 5px;
     max-width: 100%;
     box-sizing: border-box;
