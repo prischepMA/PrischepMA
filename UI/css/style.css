@@ -156,7 +156,7 @@ footer {
     color: white;
 }
 
-.some-info {
+address {
     display: inline-block;
     float: right;
     position: relative;
@@ -173,7 +173,7 @@ footer {
 }
 
 /************************************body******************************************************/
-.filtr {
+nav {
     border-top: 8px solid #4eb1ba;
     border-bottom: 8px solid #4eb1ba;
     height: auto;
@@ -221,7 +221,7 @@ footer {
     position: relative;
 }
 
-.photos-table {
+section {
     text-align: justify;
     width: auto;
     position: relative;
@@ -230,13 +230,13 @@ footer {
     padding: 2em;
 }
 
-.photos-table:after {
+section:after {
     display: inline-block;
     content: "";
     width: 100%;
 }
 
-.cell {
+article {
     vertical-align: top;
     display: inline-block;
     width: 17%;
@@ -331,7 +331,7 @@ footer {
 }
 
 @media screen and (max-width: 960px) {
-    .cell {
+    article {
         vertical-align: top;
         display: inline-block;
         width: 45%;
@@ -342,7 +342,7 @@ footer {
 }
 
 @media screen and (max-width: 768px) {
-    .cell {
+    article {
         vertical-align: top;
         display: inline-block;
         width: 100%;
@@ -351,7 +351,7 @@ footer {
         padding: 0.25em;
     }
 
-    .some-info {
+    address {
         display: inline-block;
         float: right;
         position: relative;
