@@ -1,4 +1,4 @@
-let user = null;
+let user = "Прищеп Максим";
 
 let dom = (function () {
     function showPhotoPost(post) {
@@ -72,7 +72,7 @@ let dom = (function () {
     };
 
     let showPhotoPosts = function (skip, top, filterCofig) {
-        document.body.getElementsByTagName('section')[0].innerHTML = '';
+        document.body.getElementsByTagName('section')[0].textContent = '';
         let array = modul.getPhotoPosts(skip, top, filterCofig);
         for (let i = 0; i < array.length; i++) {
             showPhotoPost(array[i]);
@@ -80,7 +80,7 @@ let dom = (function () {
     }
 
     let checkUser = function () {
-        document.querySelector('header').innerText = '';
+        document.querySelector('header').textContent = '';
 
         if (user) {
             let addPhoto = document.createElement('div');
@@ -89,11 +89,11 @@ let dom = (function () {
 
             let button = document.createElement('a');
             button.className = 'button30';
-            button.innerHTML = '+';
+            button.textContent = '+';
 
             let inscription = document.createElement('p');
             inscription.id = 'add-photo';
-            inscription.innerHTML = 'Add photo';
+            inscription.textContent = 'Add photo';
 
             addPhoto.appendChild(button);
             addPhoto.appendChild(inscription);
@@ -104,14 +104,14 @@ let dom = (function () {
 
             let exitButton = document.createElement('button');
             exitButton.className = 'button-head';
-            exitButton.innerHTML = 'Exit';
+            exitButton.textContent = 'Exit';
 
             exitBlock.appendChild(exitButton);
 
             let userName = document.createElement('div');
             userName.className = 'button-in-header';
             userName.id = 'user-name';
-            userName.innerHTML = user;
+            userName.textContent = user;
 
             document.querySelector('header').appendChild(addPhoto);
             document.querySelector('header').appendChild(exitBlock);
@@ -124,7 +124,7 @@ let dom = (function () {
 
             let signInButton = document.createElement('button');
             signInButton.className = 'button-head';
-            signInButton.innerHTML = 'Sign in';
+            signInButton.textContent = 'Sign in';
 
             signInBlock.appendChild(signInButton);
 
@@ -140,13 +140,13 @@ let dom = (function () {
 
     let addPhotoPost = function (post, skip, top, filterConfig) {
         if (modul.addPhotoPost(post)) {
-            display(skip, top, filterConfig);
+            showPhotoPosts(skip, top, filterConfig);
         }
     }
 
     let editPhotoPost = function (id, post, skip, top, filterConfig) {
         if (modul.editPhotoPost(id.toString(), post)) {
-            display(skip, top, filterConfig);
+            showPhotoPosts(skip, top, filterConfig);
         }
     }
 
@@ -223,3 +223,5 @@ dom.checkUser();
 //editPost('1', {description: 'Hello', hashtags: ['#summer']})
 //removePost(1,0,20)
 //addPost(CorrectPost,0,20)
+//addAuthorSuggestions()
+//addTagsSuggestions()
