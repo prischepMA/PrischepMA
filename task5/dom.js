@@ -4,41 +4,41 @@ let dom = (function () {
     function showPhotoPost(post) {
         let photoTable = document.body.getElementsByTagName('section')[0];
 
-        let Cell = document.createElement('article');
-        Cell.setAttribute('id', post.id);
+        let сell = document.createElement('article');
+        сell.setAttribute('id', post.id);
 
         let authorName = document.createElement('div');
-        authorName.className = "auther-name";
+        authorName.className = 'auther-name';
         authorName.innerHTML = post.author;
 
         let dateAndTime = document.createElement('div');
-        dateAndTime.className = "date-and-time";
+        dateAndTime.className = 'date-and-time';
         dateAndTime.innerHTML = ('0' + post.createdAt.getDate()).slice(-2) +
             '.' + ('0' + (post.createdAt.getMonth() + 1)).slice(-2) +
             '.' + post.createdAt.getFullYear();
 
         let image = document.createElement('img');
-        image.className = "image-inside";
+        image.className = 'image-inside';
         image.setAttribute('src', post.photoLink);
 
         let imgRedact = document.createElement('img');
         let imgLikes = document.createElement('img');
         let imgDelete = document.createElement('img');
-        imgRedact.className = "redact";
-        imgLikes.className = "like";
-        imgDelete.className = "del";
+        imgRedact.className = 'redact';
+        imgLikes.className = 'like';
+        imgDelete.className = 'del';
         imgLikes.setAttribute('src', 'img/like.png');
         if (post.author === user) {
-            imgDelete.setAttribute('src', "img/del.png");
+            imgDelete.setAttribute('src', 'img/del.png');
 
-            imgRedact.setAttribute('src', "img/redact.png");
+            imgRedact.setAttribute('src','img/redact.png');
         }
 
-        let backUnderPhoto = document.createElement("div");
-        backUnderPhoto.className = "back-under-photo";
+        let backUnderPhoto = document.createElement('div');
+        backUnderPhoto.className = 'back-under-photo';
 
-        let tags = document.createElement("div");
-        tags.className = "tags";
+        let tags = document.createElement('div');
+        tags.className = 'tags';
 
 
         if (post.hashtags !== undefined) {
@@ -46,33 +46,33 @@ let dom = (function () {
         }
 
 
-        let description = document.createElement("div");
-        description.className = "description";
+        let description = document.createElement('div');
+        description.className = 'description';
         description.innerHTML = post.description;
 
 
-        Cell.appendChild(authorName);
-        Cell.appendChild(dateAndTime);
-        Cell.appendChild(image);
+        сell.appendChild(authorName);
+        сell.appendChild(dateAndTime);
+        сell.appendChild(image);
 
         if (user === post.author) {
-            Cell.appendChild(imgRedact);
+            сell.appendChild(imgRedact);
         }
 
-        Cell.appendChild(imgLikes);
+        сell.appendChild(imgLikes);
 
         if (user === post.author) {
-            Cell.appendChild(imgDelete);
+            сell.appendChild(imgDelete);
         }
 
         backUnderPhoto.appendChild(tags);
         backUnderPhoto.appendChild(description);
-        Cell.appendChild(backUnderPhoto);
-        photoTable.appendChild(Cell);
+        сell.appendChild(backUnderPhoto);
+        photoTable.appendChild(сell);
     };
 
     let showPhotoPosts = function (skip, top, filterCofig) {
-        document.body.getElementsByTagName('section')[0].innerHTML = "";
+        document.body.getElementsByTagName('section')[0].innerHTML = '';
         let array = modul.getPhotoPosts(skip, top, filterCofig);
         for (let i = 0; i < array.length; i++) {
             showPhotoPost(array[i]);
@@ -80,37 +80,37 @@ let dom = (function () {
     }
 
     let checkUser = function () {
-        document.querySelector('header').innerText = "";
+        document.querySelector('header').innerText = '';
 
         if (user) {
             let addPhoto = document.createElement('div');
-            addPhoto.className = "button-in-header";
-            addPhoto.id = "add-new-photo";
+            addPhoto.className = 'button-in-header';
+            addPhoto.id = 'add-new-photo';
 
             let button = document.createElement('a');
-            button.className = "button30";
-            button.innerHTML = "+";
+            button.className = 'button30';
+            button.innerHTML = '+';
 
             let inscription = document.createElement('p');
-            inscription.id = "add-photo";
-            inscription.innerHTML = "Add photo";
+            inscription.id = 'add-photo';
+            inscription.innerHTML = 'Add photo';
 
             addPhoto.appendChild(button);
             addPhoto.appendChild(inscription);
 
             let exitBlock = document.createElement('div');
-            exitBlock.className = "button-in-header";
-            exitBlock.id = "exit";
+            exitBlock.className = 'button-in-header';
+            exitBlock.id = 'exit';
 
             let exitButton = document.createElement('button');
-            exitButton.className = "button-head";
-            exitButton.innerHTML = "Exit";
+            exitButton.className = 'button-head';
+            exitButton.innerHTML = 'Exit';
 
             exitBlock.appendChild(exitButton);
 
             let userName = document.createElement('div');
-            userName.className = "button-in-header";
-            userName.id = "user-name";
+            userName.className = 'button-in-header';
+            userName.id = 'user-name';
             userName.innerHTML = user;
 
             document.querySelector('header').appendChild(addPhoto);
@@ -119,12 +119,12 @@ let dom = (function () {
         }
         else {
             let signInBlock = document.createElement('div');
-            signInBlock.className = "button-in-header";
-            signInBlock.id = "sign-in";
+            signInBlock.className = 'button-in-header';
+            signInBlock.id = 'sign-in';
 
             let signInButton = document.createElement('button');
-            signInButton.className = "button-head";
-            signInButton.innerHTML = "Sign in";
+            signInButton.className = 'button-head';
+            signInButton.innerHTML = 'Sign in';
 
             signInBlock.appendChild(signInButton);
 
@@ -216,3 +216,10 @@ function addTagsSuggestions() {
 }
 
 dom.checkUser();
+
+//тетсты
+//display(0, 20)
+//display(0, 20, { hashtags: ['#friends']})
+//editPost('1', {description: 'Hello', hashtags: ['#summer']})
+//removePost(1,0,20)
+//addPost(CorrectPost,0,20)
