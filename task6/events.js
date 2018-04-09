@@ -82,8 +82,7 @@ let events = (function () {
     function exit() {
         user = null;
         dom.checkUser();
-        dom.initPAge();
-
+        dom.initPage();
     }
 
     let eNothingToShow = function () {
