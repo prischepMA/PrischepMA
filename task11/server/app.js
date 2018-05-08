@@ -1,8 +1,6 @@
 let http = require('http');
 let fs = require('fs');
-
 http.createServer(function (request, response) {
-
     console.log(`Запрошенный адрес: ${request.url}`);
     if (request.url.startsWith('/')) {
         let filePath = request.url.substr(1);
