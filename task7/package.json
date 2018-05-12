@@ -1,0 +1,19 @@
+{
+  "name": "task7",
+  "version": "1.0.0",
+  "description": "task7",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/prischepMA/PrischepFPMI.git"
+  },
+  "author": "Prischep Maksim",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/prischepMA/PrischepFPMI/issues"
+  },
+  "homepage": "https://github.com/prischepMA/PrischepFPMI#readme"
+}
