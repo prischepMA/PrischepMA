@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Cinzel" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Teko" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Cardo" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Bellefair" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Concert+One" rel="stylesheet">
+</head>
+<body>
+<header>
+</header>
+
+<nav>
+    <form id="filtr">
+        <input id="aut-sug" type="text" class="filter-info" list="author-suggestions" placeholder=" author's name">
+        <datalist id="author-suggestions" autocomplete="off">
+        </datalist>
+        <input id="date" class="filter-info" type="text" placeholder=" date(yyyy-mm-dd)">
+        <input id="tags" type="text" class="filter-info" list="tag-suggestions" placeholder=" hashtags">
+        <datalist id="tag-suggestions" autocomplete="off">
+        </datalist>
+        <button class="button-filter"
+                onclick='events.eFiltr(document.getElementById("aut-sug").value, document.getElementById("date").value, document.getElementById("tags").value); return false;'>
+            Filter
+        </button>
+    </form>
+</nav>
+
+<dialog id="window-confirm-delete" class="window">
+    <div class="box modal-box">
+        <h2>Delete</h2>
+        <h3>Are you sure you want to delete the post?</h3>
+        <form method="dialog" name="confirm-delete">
+            <button value="Yes" class="box box-button">Yes</button>
+            <button value="No" class="box box-button">No</button>
+        </form>
+    </div>
+</dialog>
+
+<dialog id="window-nothing-to-show" class="window">
+    <div class="box modal-box">
+        <h2>Error</h2>
+        <h3>Nothint to show!!!</h3>
+        <form method="dialog" name="confirm-delete">
+            <button value="Ok" class="box box-button">Ok</button>
+        </form>
+    </div>
+</dialog>
+
+<dialog id="wrong-login-or-password" class="window">
+    <div class="box modal-box">
+        <h2>Error</h2>
+        <h3>Wrong login or password!!!</h3>
+        <form method="dialog" name="confirm-delete">
+            <button value="Ok" class="box box-button">Ok</button>
+        </form>
+    </div>
+</dialog>
+
+
+<section>
+
+</section>
+
+<div class="absolute-center">
+    <button id="button-more" onclick="events.eShowMorePhotoPosts();">Load more</button>
+</div>
+
+<footer>
+    <div class="logo">
+        <img id="logo" src="img/logo.png" alt="logo">
+    </div>
+    <address>
+        Prischep Maksim
+        <br>ya.pryshchep@yandex.by
+        <br>2 grade,13 group
+        <br>latest update: 25.02.2018
+    </address>
+</footer>
+<script src="js/controller.js"></script>
+<script src="js/model.js"></script>
+<script src="js/view.js"></script>
+
+
+</body>
